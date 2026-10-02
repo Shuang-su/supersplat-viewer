@@ -5,7 +5,7 @@ These results concern the new upstream contribution, separate from the historica
 | Component | Official base | Tested feature commit |
 | --- | --- | --- |
 | splat-transform | 435b972a97a278c655d8f7015b1355215cba0d71 (3.9.0) | 9224b722107ae159c2a5cc7845d3bb5169a52698 |
-| supersplat-viewer | cd0e316e397929ffa87abd4833f73f8a0bd1fd2b (1.37.0) | 657f1d3 (feature branch) |
+| supersplat-viewer | cd0e316e397929ffa87abd4833f73f8a0bd1fd2b (1.37.0) | 657f1d32a3bd33cb9a7278965685860876eab6e1 |
 
 ## Automated checks
 
@@ -14,6 +14,8 @@ All commands ran on Node **24.21.0** on macOS.
 - Generator: `npm test` passed (851 passed, 1 skipped); explicit `TEST_WEBGPU=1 node --import tsx --test --test-force-exit test/voxel-tiles.test.mjs` passed 12/12 tests. Formatting, lint, typecheck, publint and Typedoc passed. Typedoc emitted 13 pre-existing warnings; publint emitted an existing metadata suggestion.
 - Generator assertions cover decoded core occupancy against monolithic output, rotated cross-boundary Gaussians, zero-overlap seams, shared grid alignment, transforms, empty tiles/gaps, capacities, failed reads and failed binary writes. A final fixture-only enlargement was followed by another 12/12 CPU/GPU run.
 - Viewer: build, typecheck, formatting, lint, publint and all **64/64 unit tests** passed. Behavior tests include request deduplication, neighborhood changes, delayed results, eviction/cancellation, retries, destroy, absent coverage, occupied overlap union, legacy format loading, walking safeguards and overlay allocation/disposal.
+
+GitHub-hosted CI has **not run its jobs yet**: the [generator workflow](https://github.com/playcanvas/splat-transform/actions/runs/37026461361) and [viewer workflow](https://github.com/playcanvas/supersplat-viewer/actions/runs/37026889739) both report `action_required`, pending upstream approval. The viewer Vercel preview reports `Authorization required to deploy` and [requests authorization from a PlayCanvas team member](https://github.com/playcanvas/supersplat-viewer/pull/328#issuecomment-5955599937). These are external authorization gates, not passing hosted checks or observed build failures.
 
 ## Actual browser integration
 
