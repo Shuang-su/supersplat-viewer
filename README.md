@@ -1,5 +1,7 @@
 # Tiled voxel collision: public deployment evidence
 
+The upstream drafts are [splat-transform #345](https://github.com/playcanvas/splat-transform/pull/345) and [supersplat-viewer #328](https://github.com/playcanvas/supersplat-viewer/pull/328), discussed in [generator issue #344](https://github.com/playcanvas/splat-transform/issues/344) and [viewer issue #327](https://github.com/playcanvas/supersplat-viewer/issues/327). For the new implementation, see the [small reproducible fixture](repro/) and [actual upstream integration results](integration.md). The deployment observations below are separate historical evidence.
+
 Observed on **2 October 2026, approximately 22:42–22:50 Asia/Shanghai** using a separate, headed Playwright Chromium session on macOS, with a 1600 × 1000 viewport. The browser user agent reports Chrome 154.0.0.0. Both pages report **Metaflow Viewer 5.20.1, SuperSplat 1.35.2, PlayCanvas Engine 2.22.4 (b5b9839), renderer: WebGPU** in the console.
 
 These are screenshots of the existing public MetaFlow deployment, which demonstrates the motivation and prior integration. They are **not acceptance tests of the proposed upstream implementation**, nor a claim that all tiles or walking routes work. No full source scene was downloaded for redistribution, and no production content was changed.
